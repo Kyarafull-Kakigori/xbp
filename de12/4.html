@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>python rondomで簡易ゲーム作成</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+    <style>
+        body{
+          background-color:rgb(164, 161, 162);
+        }
+       </style>
+</head> <link rel="stylesheet" href="./css/style.css">
+<body>
+    <h1>タイピングゲーム</h1>
+    
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+    <div><h2>ゲーム説明</h2>
+        ・ランダムでことわざが出題<br>
+        ・制限時間100秒<br>
+        ・エンターでスタート<br>
+        ・リトライ可能<br>
+         <!-- ①↓に文字を書いてみよう -->
+         <div>
+        
+
+
+         <!-- ④↓に外部リンクを作ってみよう -->
+        
+    </div>
+    <h2>ソースコード</h2>
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">import random</li>
+        <li style="background-color:#EEF;">import time</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"># ことわざリスト</li>
+        <li style="background-color:#EFF;">kotowaza_list = ["さるもきからおちる", "じゃのみちはへび", "にとうおうものはいっとうもえず", "でるくいはうたれる", "はなよりだんご", "うりのつるにはなすびにならず", "いのなかのかわずたいかいにでず"]</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"># ゲームのメインループ</li>
+        <li style="background-color:#EEF;">score = 0</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">input("エンターキーを押してスタート！")</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">start_time = time.time()</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">for kotowaza in kotowaza_list:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(f"ひらがな: {kotowaza}")</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;input_text = input("ひらがなで入力してください: ")</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if input_text == kotowaza:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("正解です！")</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score += 1</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;else:        print("不正解です。")</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">end_time = time.time()</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">elapsed_time = end_time - start_time</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">if elapsed_time &lt; 100:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(f"ゲーム終了！正答率: {score}/7, 得点: {score}/10")</li>
+        <li style="background-color:#EEF;">else:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("タイムアップ")</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"># 得点に応じ再挑戦のオプションを提供</li>
+        <li style="background-color:#EEF;">retry = input("もう一度プレイしますか？ (はい/いいえ): ")</li>
+        <li style="background-color:#EFF;">if retry.lower() == "はい":</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;# ゲームをリセットして再挑戦</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;score = 0</li>
+        </ol></code>
+        <div></div>
+        <div><h2>反省点</h2>
+        ひらがなで入力したら正解になるはずなのに、漢字にで入力したら正解になった。
+        修正したかったが時間がなく妥協ため調べながら修正点を見つけていく。<br>
+</div>
+
+
+
+
+</body>
+</html>

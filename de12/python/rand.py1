@@ -1,0 +1,32 @@
+import random
+import string
+import time
+
+def generate_random_string(length):
+    characters = string.ascii_lowercase
+    return ''.join(random.choice(characters) for _ in range(length))
+
+def typing_game():
+    score = 0
+    game_duration = 30  # ゲームの時間制限（秒）
+
+    print("ランダムなタイピングゲームを始めます！")
+    input("Enterを押してスタート！")
+
+    start_time = time.time()
+
+    while time.time() - start_time < game_duration:
+        target_string = generate_random_string(5)  # 5文字のランダムな文字列を生成
+        print("タイプ: ", target_string)
+        user_input = input("入力: ")
+
+        if user_input == target_string:
+            print("正解！")
+            score += 1
+        else:
+            print("不正解。")
+
+    print(f"ゲーム終了！ スコア: {score}")
+
+if __name__ == "__main__":
+    typing_game()
