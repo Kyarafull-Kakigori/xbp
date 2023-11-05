@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>佐藤力の課題５</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+    <style>
+        body{
+          background-color:rgb(84, 132, 200);
+        }
+       </style>
+</head> <link rel="stylesheet" href="./css/style.css">
+<body>
+    <h1>アプリ制作課題</h1>
+    <h2>〜簡易的なデータの分析をしよう！</h2>
+    <br>
+    今回は中学・高校の時に習った<b>データの分析（平均値・中央値・最大値・最小値・標準偏差）</b>を瞬時に出せるプログラムを作りました。
+    <br>
+    <br>
+    コードは下記の通りです。
+    <br>
+    <br>
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">import numpy as np</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">data = [9843672426472, 837492374265826348, 8847327436824, 183746825913784, 239856135476134]</li>
+        <li style="background-color:#EEF;">mean = np.mean(data)</li>
+        <li style="background-color:#EFF;">print("平均値:", mean)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">import numpy as np</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">data = [9843672426472, 837492374265826348, 8847327436824, 183746825913784, 239856135476134]</li>
+        <li style="background-color:#EEF;">median = np.median(data)</li>
+        <li style="background-color:#EFF;">print("中央値:", median)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">import numpy as np</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">data = [9843672426472, 837492374265826348, 8847327436824, 183746825913784, 239856135476134]</li>
+        <li style="background-color:#EEF;">std_deviation = np.std(data)</li>
+        <li style="background-color:#EFF;">print("標準偏差:", std_deviation)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">data = [9843672426472, 837492374265826348, 8847327436824, 183746825913784, 239856135476134]</li>
+        <li style="background-color:#EEF;">max_value = max(data)</li>
+        <li style="background-color:#EFF;">min_value = min(data)</li>
+        <li style="background-color:#EEF;">print("最大値:", max_value)</li>
+        <li style="background-color:#EFF;">print("最小値:", min_value)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        </ol></code>
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+    <br>
+    <h2>・利用方法</h2>
+    １、アプリを起動<br>
+    ２、平均値・中央値・最大値・最小値・標準偏差に適当な値・適当な個数入力していく<br>
+    ３、実行すると求めたい値が出る<br>
+    
+　　　<h2>・反省点</h2>
+    ・簡単すぎて莫大な数字でない限りこのプログラムを実行する意味がない<br>
+    ・簡単なものに逃げず世界各国の人口推移や気温の推移の分析など、専門的なホームページに飛ばないとわからないテーマにすればよかった<br>
+      
+
+</body>
+</html>
