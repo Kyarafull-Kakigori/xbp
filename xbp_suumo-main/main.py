@@ -16,10 +16,10 @@ df = suumo.read_csv("./data/yokohama_kawasaki.csv", index_col=0, encoding="utf-8
 
 # データ分析
 #df.n_rooms("徒歩")
-#df.n_rooms_by_line(["東急東横線", "みなとみらい線"], "徒歩")
+#df.n_rooms_by_line(["東急東横線",” "], "徒歩")
 
-df.average_bar("家賃", "徒歩")
-df.average_bar_by_line(["東急東横線", "みなとみらい線"], "家賃", "徒歩")
+#df.average_bar("家賃", "徒歩")
+#df.average_bar_by_line(["東急東横線", ""], "家賃", "徒歩")
 
-#df.scatter_line("徒歩", "合計時間")
-#df.scatter_station(["東急東横線", "みなとみらい線"], "", "合計時間")
+df.scatter_line("徒歩", "合計時間")
+df.scatter_station(["東急東横線", "みなとみらい線"], "家賃", "合計時間")
